@@ -1,0 +1,17 @@
+---
+version: "3.6"
+services:
+  appdaemon:
+    build: .
+    container_name: appdaemon
+    ports:
+      - "127.0.0.1:5050:5050"
+    volumes:
+      - /opt/docker/appdaemon:/conf
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+    environment:
+      HA_URL: "http://127.0.0.1:8123"
+      TOKEN: "${HA_TOKEN}"
+      DASH_URL: "http://captain:5050"
+    restart: unless-stopped
