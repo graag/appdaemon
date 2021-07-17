@@ -28,3 +28,4 @@ pygments==2.8.1
 sockjs==0.10.0
 uvloop==0.14.0; sys_platform != 'win32'
 wheel==0.36.2
+simple-pid==0.2.4
