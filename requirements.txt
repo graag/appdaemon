@@ -105,3 +105,4 @@ wsproto==1.2.0
     # via simple-websocket
 yarl==1.18.3
     # via aiohttp
+simple-pid==0.2.4
